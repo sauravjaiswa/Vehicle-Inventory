@@ -26,7 +26,7 @@ namespace Vehicle_Inventory
                     $"\nYear - {vehicle.Year}" +
                     $"\nPurchase Value - Rs {vehicle.PurchaseValue}" +
                     $"\nDistance - {vehicle.Distance} km" +
-                    $"\nSale Price - Rs {vehicle.SalePrice()}");
+                    $"\nSale Price - Rs {vehicle.SalePrice}");
         }
 
         public void Add(IVehicle vehicle)
@@ -62,7 +62,7 @@ namespace Vehicle_Inventory
 
         public void SalesPriceSearch(double price)
         {
-            var query = _vehicles.Where(v => (v.SalePrice() == price));
+            var query = _vehicles.Where(v => (v.SalePrice == price));
 
             Console.WriteLine($"All Vehicles of Rs {price}->");
             foreach (IVehicle vehicle in query)

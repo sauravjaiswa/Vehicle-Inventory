@@ -7,6 +7,6 @@
         int Year { get; set; }
         double PurchaseValue { get; set; }
         double Distance { get; set; }
-        double SalePrice();
+        double SalePrice { get; }
     }
 }
